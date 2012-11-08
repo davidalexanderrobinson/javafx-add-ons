@@ -12,6 +12,23 @@ Developed by Anton Smirnov (dev@antonsmirnov.name), see https://github.com/4ntoi
 
 I just made small changes.
 
+*Example :*
+
+     Dialog.showInfo(properties.getProperty("information"), message, addDocumentScreen.get().getMainStage());
+
+     Dialog.buildConfirmation(properties.getProperty("delete"), properties.getProperty("wanna_delete_item_named").replace("{0}", getString()))
+     		.addYesButton(new EventHandler<ActionEvent>() {
+     			@Override
+     			public void handle(ActionEvent arg0) {
+     				GedDocumentService.deleteDocumentFile(getFilePathFromTreeItem(getTreeItem()));
+     				getTreeItem().getParent().getChildren().remove(getTreeItem());
+     			}
+     		})
+     		.addNoButton(null)
+     		.addCancelButton(null)
+     		.build()
+     		.show();
+
 
 Compilation note
 ----------------
