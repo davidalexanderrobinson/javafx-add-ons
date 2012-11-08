@@ -29,6 +29,20 @@ I just made small changes.
      		.build()
      		.show();
 
+			
+**Date picker**
+
+Developed by Christian Schudt (http://myjavafx.blogspot.fr/).
+
+*Example :*
+
+     editDocumentDate = new DatePicker();
+     editDocumentDate.setDateFormat(new SimpleDateFormat("dd/MM/yyyy"));
+     
+     editDocumentDate.getCalendarView().setShowTodayButton(true);
+     editDocumentDate.getCalendarView().todayButtonTextProperty().set(properties.getProperty("today"));
+     editDocumentDate.setSelectedDate(new Date());
+
 
 Compilation note
 ----------------

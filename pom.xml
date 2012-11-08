@@ -73,6 +73,7 @@
 
 	<modules>
 		<module>javafx-dialog</module>
+		<module>javafx-calendar</module>
 	</modules>
 
 
