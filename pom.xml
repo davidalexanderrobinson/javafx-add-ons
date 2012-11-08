@@ -75,6 +75,7 @@
 		<module>javafx-dialog</module>
 		<module>javafx-calendar</module>
 		<module>javafx-fieldset</module>
+		<module>javafx-file-selector</module>
 	</modules>
 
 
