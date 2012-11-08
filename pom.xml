@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>fr.xmichel.javafx</groupId>
+	<artifactId>javafx-addons</artifactId>
+	<version>1.0.0</version>
+	<name>Additional widget for javafx</name>
+	<description></description>
+	<packaging>pom</packaging>
+
+	
+	<developers>
+        <developer>
+            <id>xaviermichel</id>
+            <name>Xavier MICHEL</name>
+        </developer>
+    </developers>
+	
+    <licenses>
+        <license>
+            <name>zlib License</name>
+            <url>http://en.wikipedia.org/wiki/Zlib_License</url>
+        </license>
+    </licenses>
+	
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>central</id>
+			<name>Maven Plugin Repository</name>
+			<url>http://repo1.maven.org/maven2</url>
+			<layout>default</layout>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+		</repository>
+	</repositories>
+
+
+	<modules>
+		<module>javafx-dialog</module>
+	</modules>
+
+
+	<distributionManagement>
+		<repository>
+			<id>repo</id>
+			<url>https://github.com/xaviermichel/maven-repo/raw/master/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshot-repo</id>
+			<url>https://github.com/xaviermichel/maven-repo/raw/master/snapshots</url>
+												</snapshotRepository>
+	</distributionManagement>
+
+</project>
+
