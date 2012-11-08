@@ -115,20 +115,15 @@ That's the result of my work :p
 
 *Example :*
 
-     // load css
-	 scene.getStylesheets().addAll("templates/tools/fielset.css");
-
-     VBox fieldSetPrinterBox = new VBox();
-     fieldSetPrinterBox.setSpacing(10);
-     FxFieldSet fieldSetPrinter = new FxFieldSet(fieldSetPrinterBox);
-     fieldSetPrinter.setStyleClassForBorder("fieldSet");
-     fieldSetPrinterBox.getChildren().addAll(new Label(properties.getProperty("question_printer")), comboPrinter);
+     libraryLocationSelector = new DirectorySelector(properties.getProperty("select_root_library_directory"));
+     libraryLocationSelector.setCurrentFilePath(Profile.getInstance().getLibraryRoot());
+     libraryLocationSelector.addFileChangedListener(eventHandler);
 	 
 *Wanna use it ?*
 
      <dependency>
      	<groupId>fr.xmichel.javafx</groupId>
-     	<artifactId>javafx-fieldset</artifactId>
+     	<artifactId>javafx-fileselector</artifactId>
      	<version>1.0.0</version>
      </dependency>
 
