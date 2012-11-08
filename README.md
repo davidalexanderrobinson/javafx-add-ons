@@ -66,6 +66,9 @@ Developed by Christian Schudt (http://myjavafx.blogspot.fr/).
 
 *Example :*
 
+     // load css
+	 scene.getStylesheets().addAll("templates/tools/calendarstyle.css");
+
      editDocumentDate = new DatePicker();
      editDocumentDate.setDateFormat(new SimpleDateFormat("dd/MM/yyyy"));
      
@@ -81,6 +84,30 @@ Developed by Christian Schudt (http://myjavafx.blogspot.fr/).
      	<version>1.0.0</version>
      </dependency>
 
+	 
+**Fieldset**
+
+Developed by Sai Dandem (see http://code.google.com/p/javafx-demos/source/browse/trunk/javafx-demos/src/main/java/com/ezest/javafx/demogallery/FieldSetDemo.java)
+
+*Example :*
+
+     // load css
+	 scene.getStylesheets().addAll("templates/tools/fielset.css");
+
+     VBox fieldSetPrinterBox = new VBox();
+     fieldSetPrinterBox.setSpacing(10);
+     FxFieldSet fieldSetPrinter = new FxFieldSet(fieldSetPrinterBox);
+     fieldSetPrinter.setStyleClassForBorder("fieldSet");
+     fieldSetPrinterBox.getChildren().addAll(new Label(properties.getProperty("question_printer")), comboPrinter);
+	 
+*Wanna use it ?*
+
+     <dependency>
+     	<groupId>fr.xmichel.javafx</groupId>
+     	<artifactId>javafx-fieldset</artifactId>
+     	<version>1.0.0</version>
+     </dependency>
+	  
 	 
 Compilation note
 ----------------
