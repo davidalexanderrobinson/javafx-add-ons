@@ -108,6 +108,30 @@ Developed by Sai Dandem (see http://code.google.com/p/javafx-demos/source/browse
      	<version>1.0.0</version>
      </dependency>
 	  
+
+**File selector**
+
+That's the result of my work :p
+
+*Example :*
+
+     // load css
+	 scene.getStylesheets().addAll("templates/tools/fielset.css");
+
+     VBox fieldSetPrinterBox = new VBox();
+     fieldSetPrinterBox.setSpacing(10);
+     FxFieldSet fieldSetPrinter = new FxFieldSet(fieldSetPrinterBox);
+     fieldSetPrinter.setStyleClassForBorder("fieldSet");
+     fieldSetPrinterBox.getChildren().addAll(new Label(properties.getProperty("question_printer")), comboPrinter);
+	 
+*Wanna use it ?*
+
+     <dependency>
+     	<groupId>fr.xmichel.javafx</groupId>
+     	<artifactId>javafx-fieldset</artifactId>
+     	<version>1.0.0</version>
+     </dependency>
+
 	 
 Compilation note
 ----------------
