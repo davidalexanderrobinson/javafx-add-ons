@@ -3,6 +3,27 @@ javafx-add-ons
 
 Some useful (or not) add ons for javafx
 
+How to...
+---------
+
+**Use this repo ?**
+
+Add in your pom.xml :
+
+     <repositories>
+     	<!-- 
+     	<repository>
+     		<id>xaviermichel-snapshots</id>
+     		<url>https://github.com/xaviermichel/maven-repo/raw/master/snapshots</url>
+     	</repository>
+     	-->
+     	<repository>
+     		<id>xaviermichel-releases</id>
+     		<url>https://github.com/xaviermichel/maven-repo/raw/master/releases</url>
+     	</repository>
+     </repositories>
+
+
 Features
 --------
 
@@ -30,6 +51,15 @@ I just made small changes.
      		.show();
 
 			
+*Wanna use it ?*
+
+     <dependency>
+     	<groupId>fr.xmichel.javafx</groupId>
+     	<artifactId>javafx-dialog</artifactId>
+     	<version>1.0.0</version>
+     </dependency>
+
+			
 **Date picker**
 
 Developed by Christian Schudt (http://myjavafx.blogspot.fr/).
@@ -43,7 +73,15 @@ Developed by Christian Schudt (http://myjavafx.blogspot.fr/).
      editDocumentDate.getCalendarView().todayButtonTextProperty().set(properties.getProperty("today"));
      editDocumentDate.setSelectedDate(new Date());
 
+*Wanna use it ?*
 
+     <dependency>
+     	<groupId>fr.xmichel.javafx</groupId>
+     	<artifactId>javafx-calendar</artifactId>
+     	<version>1.0.0</version>
+     </dependency>
+
+	 
 Compilation note
 ----------------
 
