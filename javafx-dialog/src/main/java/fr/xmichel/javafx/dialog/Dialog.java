@@ -1,4 +1,4 @@
-package com.tools.javafx.antonsmirnov.dialog;
+package fr.xmichel.javafx.dialog;
 
 
 import java.io.PrintWriter;
