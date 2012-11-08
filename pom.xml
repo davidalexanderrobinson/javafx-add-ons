@@ -74,6 +74,7 @@
 	<modules>
 		<module>javafx-dialog</module>
 		<module>javafx-calendar</module>
+		<module>javafx-fieldset</module>
 	</modules>
 
 
