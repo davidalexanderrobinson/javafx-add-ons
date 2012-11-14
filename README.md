@@ -92,7 +92,7 @@ Developed by Sai Dandem (see http://code.google.com/p/javafx-demos/source/browse
 *Example :*
 
      // load css
-	 scene.getStylesheets().addAll("templates/tools/fielset.css");
+	 scene.getStylesheets().addAll("templates/tools/fieldset.css");
 
      VBox fieldSetPrinterBox = new VBox();
      fieldSetPrinterBox.setSpacing(10);
