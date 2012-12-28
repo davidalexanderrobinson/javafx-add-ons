@@ -187,10 +187,10 @@ public class Dialog extends Stage {
         // NOTE: invoke once during Dialog creating
         private Builder setStackTrace(Throwable t) {
             // view button
-            stage.viewStacktraceButton = new ToggleButton("View stacktrace");
+            stage.viewStacktraceButton = new ToggleButton("Consulter l'erreur (stacktrace)");
             
             // copy button
-            stage.copyStacktraceButton = new Button("Copy to clipboard");
+            stage.copyStacktraceButton = new Button("Copier le message d'erreur");
             HBox.setMargin(stage.copyStacktraceButton, new Insets(0, 0, 0, MARGIN));
             
             stage.stacktraceButtonsPanel = new HBox();
