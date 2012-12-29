@@ -87,7 +87,7 @@
 		<snapshotRepository>
 			<id>snapshot-repo</id>
 			<url>https://github.com/xaviermichel/maven-repo/raw/master/snapshots</url>
-												</snapshotRepository>
+		</snapshotRepository>
 	</distributionManagement>
 
 </project>

@@ -10,7 +10,8 @@ import javafx.scene.layout.Priority;
 
 import javax.swing.event.EventListenerList;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import fr.xmichel.javafx.fileselector.FileChangedListener;
 
@@ -24,7 +25,7 @@ public abstract class FileSelector extends HBox {
 	/**
 	 * My logger
 	 */
-	private static final Logger logger = Logger.getLogger(FileSelector.class);
+	private static final Logger logger = LoggerFactory.getLogger(FileSelector.class);
 
 	/**
 	 * To signal to listeners when selection changed
