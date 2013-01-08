@@ -56,7 +56,7 @@ I just made small changes.
      <dependency>
      	<groupId>fr.xmichel.javafx</groupId>
      	<artifactId>javafx-dialog</artifactId>
-     	<version>1.0.0</version>
+     	<version>1.0.2</version>
      </dependency>
 
 			
@@ -81,7 +81,7 @@ Developed by Christian Schudt (http://myjavafx.blogspot.fr/).
      <dependency>
      	<groupId>fr.xmichel.javafx</groupId>
      	<artifactId>javafx-calendar</artifactId>
-     	<version>1.0.0</version>
+     	<version>1.0.2</version>
      </dependency>
 
 	 
@@ -105,7 +105,7 @@ Developed by Sai Dandem (see http://code.google.com/p/javafx-demos/source/browse
      <dependency>
      	<groupId>fr.xmichel.javafx</groupId>
      	<artifactId>javafx-fieldset</artifactId>
-     	<version>1.0.0</version>
+     	<version>1.0.2</version>
      </dependency>
 	  
 
@@ -124,7 +124,7 @@ That's the result of my work :p
      <dependency>
      	<groupId>fr.xmichel.javafx</groupId>
      	<artifactId>javafx-fileselector</artifactId>
-     	<version>1.0.0</version>
+     	<version>1.0.2</version>
      </dependency>
 
 	 
@@ -150,3 +150,4 @@ Deployment note
 
      mvn -DaltDeploymentRepository=snapshot-repo::default::file:../maven-repo/snapshots clean deploy
 
+Use xmi_maven_deploy, it better ! :-)
