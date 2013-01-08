@@ -5,7 +5,7 @@
 	<parent>
 		<artifactId>javafx-addons</artifactId>
 		<groupId>fr.xmichel.javafx</groupId>
-		<version>1.0.0</version>
+		<version>1.0.3-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 
@@ -13,7 +13,6 @@
 	<artifactId>javafx-fileselector</artifactId>
 	<name>Javafx fileselector</name>
 	<description>Javafx file selector (with browse button) support</description>
-	<version>1.0.2-SNAPSHOT</version>
 
 
 	<dependencies>
