@@ -150,4 +150,4 @@ Deployment note
 
      mvn -DaltDeploymentRepository=snapshot-repo::default::file:../maven-repo/snapshots clean deploy
 
-Use xmi_maven_deploy, it better ! :-)
+Use xmi_maven_deployer.sh, it better ! :-)
