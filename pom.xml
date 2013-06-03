@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>fr.xmichel.javafx</groupId>
 	<artifactId>javafx-addons</artifactId>
-	<version>1.0.3-SNAPSHOT</version>
+	<version>1.0.4-SNAPSHOT</version>
 	<name>Additional widget for javafx</name>
 	<description></description>
 	<packaging>pom</packaging>
