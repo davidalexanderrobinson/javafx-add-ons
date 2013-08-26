@@ -11,7 +11,7 @@ How to...
 Add in your pom.xml :
 
      <repositories>
-     	<!-- 
+     	<!--
      	<repository>
      		<id>xaviermichel-snapshots</id>
      		<url>https://github.com/xaviermichel/maven-repo/raw/master/snapshots</url>
@@ -50,16 +50,16 @@ I just made small changes.
      		.build()
      		.show();
 
-			
+
 *Wanna use it ?*
 
      <dependency>
      	<groupId>fr.xmichel.javafx</groupId>
      	<artifactId>javafx-dialog</artifactId>
-     	<version>1.0.2</version>
+     	<version>1.0.4</version>
      </dependency>
 
-			
+
 **Date picker**
 
 Developed by Christian Schudt (http://myjavafx.blogspot.fr/).
@@ -71,7 +71,7 @@ Developed by Christian Schudt (http://myjavafx.blogspot.fr/).
 
      editDocumentDate = new DatePicker();
      editDocumentDate.setDateFormat(new SimpleDateFormat("dd/MM/yyyy"));
-     
+
      editDocumentDate.getCalendarView().setShowTodayButton(true);
      editDocumentDate.getCalendarView().todayButtonTextProperty().set(properties.getProperty("today"));
      editDocumentDate.setSelectedDate(new Date());
@@ -81,10 +81,10 @@ Developed by Christian Schudt (http://myjavafx.blogspot.fr/).
      <dependency>
      	<groupId>fr.xmichel.javafx</groupId>
      	<artifactId>javafx-calendar</artifactId>
-     	<version>1.0.2</version>
+     	<version>1.0.4</version>
      </dependency>
 
-	 
+
 **Fieldset**
 
 Developed by Sai Dandem (see http://code.google.com/p/javafx-demos/source/browse/trunk/javafx-demos/src/main/java/com/ezest/javafx/demogallery/FieldSetDemo.java)
@@ -99,15 +99,15 @@ Developed by Sai Dandem (see http://code.google.com/p/javafx-demos/source/browse
      FxFieldSet fieldSetPrinter = new FxFieldSet(fieldSetPrinterBox);
      fieldSetPrinter.setStyleClassForBorder("fieldSet");
      fieldSetPrinterBox.getChildren().addAll(new Label(properties.getProperty("question_printer")), comboPrinter);
-	 
+
 *Wanna use it ?*
 
      <dependency>
      	<groupId>fr.xmichel.javafx</groupId>
      	<artifactId>javafx-fieldset</artifactId>
-     	<version>1.0.2</version>
+     	<version>1.0.4</version>
      </dependency>
-	  
+
 
 **File selector**
 
@@ -118,16 +118,16 @@ That's the result of my work :p
      libraryLocationSelector = new DirectorySelector(properties.getProperty("select_root_library_directory"));
      libraryLocationSelector.setCurrentFilePath(Profile.getInstance().getLibraryRoot());
      libraryLocationSelector.addFileChangedListener(eventHandler);
-	 
+
 *Wanna use it ?*
 
      <dependency>
      	<groupId>fr.xmichel.javafx</groupId>
      	<artifactId>javafx-fileselector</artifactId>
-     	<version>1.0.2</version>
+     	<version>1.0.4</version>
      </dependency>
 
-	 
+
 Compilation note
 ----------------
 
