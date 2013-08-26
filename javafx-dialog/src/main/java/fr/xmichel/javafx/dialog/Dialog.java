@@ -5,6 +5,8 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.ResourceBundle;
+
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -31,8 +33,6 @@ import javafx.stage.Window;
 /**
  *
  * @author Anton Smirnov (dev@antonsmirnov.name)
- * 
- * @see https://github.com/4ntoine/JavaFxDialog
  */
 public class Dialog extends Stage {
 
@@ -81,8 +81,10 @@ public class Dialog extends Stage {
         protected static final String ICON_PATH = "/images/dialog/";
         
         protected Dialog stage;
-        
-        public Builder create() {
+        private ResourceBundle resources;
+
+      public Builder create() {
+            resources = ResourceBundle.getBundle("dialog");
             stage = new Dialog();
             stage.setResizable(false);
             stage.initStyle(StageStyle.UTILITY);
@@ -149,16 +151,9 @@ public class Dialog extends Stage {
         }
         
         private void alignScrollPane() {
-            stage.setWidth(
-                stage.icon.getImage().getWidth()
-                + Math.max(
-                    stage.messageLabel.getWidth(),
-                    (stage.stacktraceVisible 
-                        ? Math.max(
-                            stage.stacktraceButtonsPanel.getWidth(),
-                            stage.stackTraceLabel.getWidth())
-                        : stage.stacktraceButtonsPanel.getWidth()))
-                + 5 * MARGIN);
+            stage.setWidth(stage.icon.getImage().getWidth() + Math.max(stage.messageLabel.getWidth(),
+                    (stage.stacktraceVisible ? Math.max(stage.stacktraceButtonsPanel.getWidth(),
+                            stage.stackTraceLabel.getWidth()) : stage.stacktraceButtonsPanel.getWidth())) + 5 * MARGIN);
             
             stage.setHeight(
                     Math.max(
@@ -187,10 +182,10 @@ public class Dialog extends Stage {
         // NOTE: invoke once during Dialog creating
         private Builder setStackTrace(Throwable t) {
             // view button
-            stage.viewStacktraceButton = new ToggleButton("Consulter l'erreur (stacktrace)");
+            stage.viewStacktraceButton = new ToggleButton(getString("buttonlabel.viewstacktrace"));
             
             // copy button
-            stage.copyStacktraceButton = new Button("Copier le message d'erreur");
+            stage.copyStacktraceButton = new Button(getString("buttonlabel.copystacktrace"));
             HBox.setMargin(stage.copyStacktraceButton, new Insets(0, 0, 0, MARGIN));
             
             stage.stacktraceButtonsPanel = new HBox();
@@ -297,7 +292,7 @@ public class Dialog extends Stage {
         }
                 
         protected Builder addOkButton() {
-            stage.okButton = new Button("OK");
+            stage.okButton = new Button(getString("buttonlabel.ok"));
             stage.okButton.setPrefWidth(BUTTON_WIDTH);
             stage.okButton.setOnAction(new EventHandler<ActionEvent> () {
 
@@ -310,7 +305,7 @@ public class Dialog extends Stage {
             return this;
         }
 
-        protected Builder addConfirmationButton(String buttonCaption, final EventHandler<ActionEvent> actionHandler) {
+        public Builder addConfirmationButton(String buttonCaption, final EventHandler actionHandler) {
             Button confirmationButton = new Button(buttonCaption);
             confirmationButton.setMinWidth(BUTTON_WIDTH);
             confirmationButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -332,8 +327,8 @@ public class Dialog extends Stage {
          * @param actionHandler action handler
          * @return 
          */
-        public Builder addYesButton(EventHandler<ActionEvent> actionHandler) {
-            return addConfirmationButton("Oui", actionHandler);
+        public Builder addYesButton(EventHandler actionHandler) {
+            return addConfirmationButton(getString("buttonlabel.yes"), actionHandler);
         }
         
         /**
@@ -342,8 +337,8 @@ public class Dialog extends Stage {
          * @param actionHandler action handler
          * @return 
          */
-        public Builder addNoButton(EventHandler<ActionEvent> actionHandler) {
-            return addConfirmationButton("Non", actionHandler);
+        public Builder addNoButton(EventHandler actionHandler) {
+            return addConfirmationButton(getString("buttonlabel.no"), actionHandler);
         }
         
         /**
@@ -352,8 +347,8 @@ public class Dialog extends Stage {
          * @param actionHandler action handler
          * @return 
          */
-        public Builder addCancelButton(EventHandler<ActionEvent> actionHandler) {
-            return addConfirmationButton("Annuler", actionHandler);
+        public Builder addCancelButton(EventHandler actionHandler) {
+            return addConfirmationButton(getString("buttonlabel.cancel"), actionHandler);
         }
         
         /**
@@ -369,6 +364,10 @@ public class Dialog extends Stage {
             return stage;
         }
         
+      
+        private String getString(String key) {
+          return resources.getString(key);
+        }
     }
     
     /**
